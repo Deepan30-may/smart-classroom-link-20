@@ -25,12 +25,12 @@ const ChatMessage = ({ message, sender, timestamp, index }: ChatMessageProps) =>
       <div 
         className={`max-w-md ${
           isUser 
-            ? "bg-gradient-to-r from-blue-600 to-purple-600" 
+            ? "bg-gradient-to-r from-blue-600 to-cyan-600" 
             : "glass"
         } rounded-2xl p-4 shadow-lg`}
       >
-        <p className="text-white">{message}</p>
-        <p className="text-xs text-white/70 mt-1 text-right">{timestamp}</p>
+        <p className="text-white font-medium">{message}</p>
+        <p className="text-xs text-white/80 mt-1 text-right">{timestamp}</p>
       </div>
     </motion.div>
   );

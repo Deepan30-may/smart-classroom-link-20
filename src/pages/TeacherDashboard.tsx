@@ -26,10 +26,10 @@ const TeacherDashboard = () => {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <h1 className="text-4xl font-light text-white mb-2 gradient-text">
-            Welcome back, <span className="font-medium">Ms. Johnson</span>
+          <h1 className="text-4xl font-medium text-amber-300 mb-2">
+            Welcome back, <span className="font-semibold">Ms. Johnson</span>
           </h1>
-          <p className="text-lg text-white/80">
+          <p className="text-lg text-white font-medium">
             Here are your assigned classes
           </p>
         </motion.div>

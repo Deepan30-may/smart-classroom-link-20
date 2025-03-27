@@ -25,14 +25,14 @@ const ClassCard = ({ id, name, students, index }: ClassCardProps) => {
       }}
       className="glass rounded-xl p-6 cursor-pointer"
     >
-      <h3 className="text-xl font-medium mb-2 text-white gradient-text">{name}</h3>
-      <p className="text-white/80 mb-4">{students} Students</p>
+      <h3 className="text-xl font-medium mb-2 text-amber-300">{name}</h3>
+      <p className="text-white/90 mb-4 font-medium">{students} Students</p>
       
       <Link to={`/teacher/class/${id}`}>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="button-animation w-full py-2 rounded-lg bg-white/10 text-white font-light tracking-wide backdrop-blur-md"
+          className="button-animation w-full py-2 rounded-lg bg-white/20 text-white font-medium tracking-wide backdrop-blur-md"
         >
           View Class
         </motion.button>
