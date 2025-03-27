@@ -19,41 +19,34 @@ const SubjectList = () => {
 
   return (
     <PageTransition>
-      <div 
-        className="min-h-screen bg-gradient-to-br from-blue-600 to-purple-700 p-6"
-        style={{
-          backgroundImage: "radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.2) 0%, transparent 40%), radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.2) 0%, transparent 40%)"
-        }}
-      >
-        <Navbar role="student" />
+      <Navbar role="student" />
+      
+      <div className="pt-24 pb-10 max-w-7xl mx-auto p-6">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-12"
+        >
+          <h1 className="text-4xl font-light text-white mb-2 gradient-text">
+            Your Subjects
+          </h1>
+          <p className="text-lg text-white/80">
+            View your progress and access subject materials
+          </p>
+        </motion.div>
         
-        <div className="pt-24 pb-10 max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-12"
-          >
-            <h1 className="text-4xl font-light text-white mb-2">
-              Your Subjects
-            </h1>
-            <p className="text-lg text-white/80">
-              View your progress and access subject materials
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {subjects.map((subject, index) => (
-              <SubjectCard 
-                key={subject.id} 
-                id={subject.id} 
-                name={subject.name} 
-                progress={subject.progress} 
-                color={subject.color}
-                index={index}
-              />
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {subjects.map((subject, index) => (
+            <SubjectCard 
+              key={subject.id} 
+              id={subject.id} 
+              name={subject.name} 
+              progress={subject.progress} 
+              color={subject.color}
+              index={index}
+            />
+          ))}
         </div>
       </div>
     </PageTransition>

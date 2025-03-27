@@ -6,14 +6,7 @@ import RoleCard from "../components/RoleCard";
 const Welcome = () => {
   return (
     <PageTransition>
-      <div 
-        className="min-h-screen flex flex-col items-center justify-center p-6 relative overflow-hidden"
-        style={{
-          background: "linear-gradient(135deg, #1a365d 0%, #3b82f6 50%, #7c3aed 100%)",
-          backgroundSize: "400% 400%",
-          animation: "gradient-animation 15s ease infinite"
-        }}
-      >
+      <div className="min-h-screen flex flex-col items-center justify-center p-6 relative overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(5)].map((_, i) => (

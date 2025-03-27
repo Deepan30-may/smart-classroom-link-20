@@ -17,40 +17,33 @@ const TeacherDashboard = () => {
 
   return (
     <PageTransition>
-      <div 
-        className="min-h-screen bg-gradient-to-br from-blue-600 to-purple-700 p-6"
-        style={{
-          backgroundImage: "radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.2) 0%, transparent 40%), radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.2) 0%, transparent 40%)"
-        }}
-      >
-        <Navbar role="teacher" />
+      <Navbar role="teacher" />
+      
+      <div className="pt-24 pb-10 max-w-7xl mx-auto p-6">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-12"
+        >
+          <h1 className="text-4xl font-light text-white mb-2 gradient-text">
+            Welcome back, <span className="font-medium">Ms. Johnson</span>
+          </h1>
+          <p className="text-lg text-white/80">
+            Here are your assigned classes
+          </p>
+        </motion.div>
         
-        <div className="pt-24 pb-10 max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-12"
-          >
-            <h1 className="text-4xl font-light text-white mb-2">
-              Welcome back, <span className="font-medium">Ms. Johnson</span>
-            </h1>
-            <p className="text-lg text-white/80">
-              Here are your assigned classes
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {classes.map((cls, index) => (
-              <ClassCard 
-                key={cls.id} 
-                id={cls.id} 
-                name={cls.name} 
-                students={cls.students} 
-                index={index}
-              />
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {classes.map((cls, index) => (
+            <ClassCard 
+              key={cls.id} 
+              id={cls.id} 
+              name={cls.name} 
+              students={cls.students} 
+              index={index}
+            />
+          ))}
         </div>
       </div>
     </PageTransition>
