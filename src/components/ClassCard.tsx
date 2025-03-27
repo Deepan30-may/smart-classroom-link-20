@@ -20,13 +20,13 @@ const ClassCard = ({ id, name, students, index }: ClassCardProps) => {
         ease: [0.22, 1, 0.36, 1]
       }}
       whileHover={{ 
-        y: -5,
-        boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+        y: -8,
+        boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1)"
       }}
       className="glass rounded-xl p-6 cursor-pointer"
     >
-      <h3 className="text-xl font-medium mb-2 text-white">{name}</h3>
-      <p className="text-white/70 mb-4">{students} Students</p>
+      <h3 className="text-xl font-medium mb-2 text-white gradient-text">{name}</h3>
+      <p className="text-white/80 mb-4">{students} Students</p>
       
       <Link to={`/teacher/class/${id}`}>
         <motion.button

@@ -18,13 +18,31 @@ const RoleCard = ({ role, delay = 0 }: RoleCardProps) => {
         ease: [0.22, 1, 0.36, 1]
       }}
       whileHover={{ 
-        y: -5,
-        boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+        y: -10,
+        boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
       }}
-      className="glass rounded-2xl p-10 w-64 h-80 flex flex-col items-center justify-center space-y-6 cursor-pointer"
+      className="glass rounded-2xl p-10 w-64 h-80 flex flex-col items-center justify-center space-y-6 cursor-pointer relative overflow-hidden"
     >
       <motion.div 
-        className={`w-24 h-24 rounded-full ${role === "student" ? "bg-blue-500" : "bg-purple-500"} flex items-center justify-center`}
+        className="absolute inset-0 bg-gradient-to-br opacity-30"
+        style={{ 
+          background: role === "student" 
+            ? "linear-gradient(45deg, #3b82f6, #60a5fa)" 
+            : "linear-gradient(45deg, #8b5cf6, #a78bfa)" 
+        }}
+        animate={{
+          backgroundPosition: ['0% 0%', '100% 100%'],
+          opacity: [0.3, 0.4, 0.3]
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          repeatType: 'reverse'
+        }}
+      />
+      
+      <motion.div 
+        className={`w-24 h-24 rounded-full ${role === "student" ? "bg-gradient-to-r from-blue-500 to-cyan-400" : "bg-gradient-to-r from-purple-500 to-pink-400"} flex items-center justify-center relative z-10`}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
@@ -41,13 +59,25 @@ const RoleCard = ({ role, delay = 0 }: RoleCardProps) => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
           )}
         </svg>
+        
+        <motion.div
+          className="absolute inset-0 rounded-full"
+          animate={{ 
+            boxShadow: ['0 0 0 0px rgba(255,255,255,0.4)', '0 0 0 10px rgba(255,255,255,0)'] 
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            repeatType: 'loop'
+          }}
+        />
       </motion.div>
       
-      <h2 className="text-2xl font-light capitalize text-center text-white">
+      <h2 className="text-2xl font-light capitalize text-center text-white relative z-10">
         {role}
       </h2>
       
-      <Link to={`/${role}`}>
+      <Link to={`/${role}`} className="relative z-10">
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -56,6 +86,28 @@ const RoleCard = ({ role, delay = 0 }: RoleCardProps) => {
           Continue
         </motion.button>
       </Link>
+      
+      {/* Animated dots */}
+      {[...Array(3)].map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute w-2 h-2 bg-white/40 rounded-full"
+          style={{
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+          }}
+          animate={{
+            y: [0, Math.random() * 30 - 15],
+            x: [0, Math.random() * 30 - 15],
+            opacity: [0, 1, 0],
+          }}
+          transition={{
+            duration: Math.random() * 3 + 2,
+            repeat: Infinity,
+            delay: Math.random() * 2,
+          }}
+        />
+      ))}
     </motion.div>
   );
 };

@@ -14,10 +14,10 @@ const Navbar = ({ role }: NavbarProps) => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="glass fixed top-4 left-1/2 transform -translate-x-1/2 backdrop-blur-md z-50 rounded-full px-6 py-3"
+      className="glass fixed top-4 left-1/2 transform -translate-x-1/2 backdrop-blur-md z-50 rounded-full px-6 py-3 border border-white/30 shadow-lg"
     >
       <nav className="flex items-center justify-between">
-        <Link to="/" className="text-white text-xl font-light mr-8">
+        <Link to="/" className="text-white text-xl font-light mr-8 gradient-text">
           EduEnhance
         </Link>
         
@@ -68,7 +68,7 @@ const NavLink = ({ to, active, children }: NavLinkProps) => {
       {active && (
         <motion.div 
           layoutId="activeNavIndicator"
-          className="absolute bottom-0 left-0 right-0 h-0.5 bg-white rounded-full"
+          className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
