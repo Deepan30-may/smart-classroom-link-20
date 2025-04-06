@@ -1,69 +1,51 @@
-# Welcome to your Lovable project
+📚 Smart Classroom App
+✨ A smart educational app created by Hack-Stars using Kodular
+🎓 Designed to help students access learning resources quickly and easily!
 
-## Project info
+🌟 Features
+✅ Smooth WebView for Smart Learning ✅ Custom Splash Screen with Branding
+✅ Built with 💖 using Kodular
+✅ Designed for Android Devices
+✅ Minimal & user-friendly UI
 
-**URL**: https://lovable.dev/projects/97399a05-529f-496d-bde8-5234f2dc1bec
+🛠️ Built With
+👨‍🎨 Frontend
+🌐 HTML5 (for external content/web interface)
+🎨 CSS3
+⚙️ JavaScript (planned integration via WebView)
+⚙️ Backend (Optional/Planned)
+🧠 AI Logic (future Python Flask/Node.js backend for dynamic content)
+🔗 Firebase / Google Sheets (planned database integration)
+📱 App Builder Platform
+🧩 Kodular – No-code drag-and-drop Android app builder
+💻 Development Tools
+🧠 Visual Studio Code (for writing custom web content if needed)
+🖥️ GitHub (for version control & sharing)
+🎨 Design Tools
+🖌️ Canva (for icons and UI design)
+📱 Screenshots
+STUDENTS: Screenshot 2025-04-05 232645 Screenshot 2025-04-05 232726 Screenshot 2025-04-05 232757 Screenshot 2025-04-05 232814
 
-## How can I edit this code?
+TEACHERS: Screenshot 2025-04-05 232836 Screenshot 2025-04-05 232856
 
-There are several ways of editing your application.
+🚀 Getting Started
+Want to try the app?
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/97399a05-529f-496d-bde8-5234f2dc1bec) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/97399a05-529f-496d-bde8-5234f2dc1bec) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+Download the .apk file from this repository
+Transfer it to your Android phone
+Enable Install unknown apps in your phone settings
+Tap to install and start learning smart!
+📦 Project Files
+File	Description
+SmartClassroom.aia	Kodular project file (editable)
+SmartClassroom.apk	Final Android app file
+README.md	Project description
+Screenshots/	Optional app preview images
+💡 Future Plans
+Add Offline Learning Materials
+Quiz/Exam Feature
+Voice Assistance
+Study Progress Tracker
+⭐ Show Your Support
+If you like the app, give it a ⭐ on GitHub!
+Let’s build more smart solutions together 💫
